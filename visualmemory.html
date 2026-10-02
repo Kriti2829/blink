@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visual Memory</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="visualMemoryGameArea">
+      <!-- INTRO SCREEN -->
+      <div id="visualMemoryIntro">
+        <img id="visualMemoryLogo" src="visualmemory.png.png" alt="Visual Memory"/>
+        <h1 id="visualMemoryTitle">Visual Memory</h1>
+        <p id="visualMemoryInstruction">Remember the pattern</p>
+        <button id="visualMemoryStartButton">Start</button>
+      </div>
+      <!-- GAME SCREEN -->
+      <div id="visualMemoryGame">
+        <h2 id="visualMemoryLevel">Level: 1</h2>
+        <div id="memoryGrid">
+          <div class="memoryBox"></div>
+          <div class="memoryBox"></div>
+          <div class="memoryBox"></div>
+          <div class="memoryBox"></div>
+          <div class="memoryBox"></div>
+          <div class="memoryBox"></div>
+          <div class="memoryBox"></div>
+          <div class="memoryBox"></div>
+          <div class="memoryBox"></div>
+        </div>
+      </div>
+      <!-- RESULT SCREEN -->
+      <div id="visualMemoryResult">
+        <h2>Game Over!</h2>
+        <p id="visualMemoryScore"></p>
+        <button id="visualMemoryTryAgain">Try Again</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

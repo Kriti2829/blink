@@ -1,0 +1,355 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    background-color: rgb(235, 200, 160);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+header img{
+    margin-top: -40px;
+}
+h1{
+    font-size: 100px;
+    margin-top: -10px;
+}
+h2{
+    font-size: 30px;
+}
+nav{
+    position:sticky;
+    top:0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 1000;
+    padding: 0px 40px;
+    background-color: white;
+}
+nav > a{
+    color: black;
+    font-size:24px;
+    padding: 20px 25px;
+    text-decoration: none;
+}
+nav a:hover {
+    background-color: #f0eeee;
+}
+nav a.active {
+    background-color:#f0eeee;
+}
+.games {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    padding: 50px 60px;
+    background-color:rgb(245, 228, 208);
+}
+.game-card {
+    background-color: white;
+    padding: 35px;
+    border-radius: 15px;
+    min-height: 180px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-decoration: none;
+    color:black;
+}
+.game-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+.game-card img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    margin-bottom: 12px;
+}
+.game-card h3 {
+    font-size: 34px;
+    margin: 5px 0;
+}
+.game-card p {
+    font-size: 20px;
+    margin: 5px 0;
+}
+body{
+     margin: 0;
+    background-color: rgb(245, 228, 208);
+}
+#gameArea {
+    width: 90%;
+    height: 80vh;
+    margin: 10vh auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    gap: 15px;
+}
+#gameArea img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    transform: translateY(-30px);
+}
+#gameArea h1 {
+    font-size: 60px;
+    margin: 0;
+    transform: translateY(-30px);
+}
+#gameArea p {
+    font-size: 25px;
+    margin: 0;
+    transform: translateY(-10px);
+}
+#message {
+}
+#numberGameArea {
+    width: 90%;
+    height: 80vh;
+    margin: 10vh auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    gap: 15px;
+}
+#numberGameArea img {
+    width: 200px;
+    height: 280px;
+    object-fit: contain;
+}
+#numberGameTitle {
+    font-size: 60px;
+    margin: 0;
+     transform: translateY(-30px);
+}
+#numberInstruction {
+    font-size: 25px;
+    margin: 0;
+     transform: translateY(-20px);
+}
+#startButton,
+#tryAgainButton {
+    padding: 12px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+#numberDisplay {
+    font-size: 48px;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+#timerLine {
+    display: none;
+    width: 300px;
+    height: 5px;
+    background-color: black;
+}
+#question {
+    font-size: 22px;
+    font-weight: bold;
+}
+#numberInput {
+    display: none;
+    width: 250px;
+    padding: 12px;
+    font-size: 20px;
+    text-align: center;
+}
+#result {
+    font-size: 18px;
+    line-height: 1.8;
+}
+#tryAgainButton {
+    display: none;
+}
+#typingGameArea {
+    width: 90%;
+    height: 80vh;
+    margin: 10vh auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    gap: 15px;
+}
+#typingLogo {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+#typingGameTitle {
+    font-size: 60px;
+    margin: 0;
+    transform: translateY(-30px);
+}
+#typingInstruction {
+    font-size: 25px;
+    margin: 0;
+    transform: translateY(-20px);
+}
+#typingMessage {
+    font-size: 25px;
+    margin: 0;
+}
+#typingTimer {
+    display: none;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0;
+}
+#typingText {
+    display: none;
+    width: 85%;
+    font-size: 22px;
+    line-height: 1.8;
+    text-align: left;
+}
+#typingText span {
+    padding: 2px 1px;
+}
+.typing-correct {
+    background-color: #b7f7b7;
+}
+.typing-wrong {
+    background-color: #ffb3b3;
+}
+.typing-current {
+    border-left: 2px solid black;
+}
+#typingResult {
+    display: none;
+}
+#typingResult h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+#typingResult p {
+    font-size: 25px;
+    margin: 10px 0;
+}
+#visualMemoryGameArea {
+    width: 90%;
+    height: 80vh;
+    margin: 10vh auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+#visualMemoryIntro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+#visualMemoryLogo {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+#visualMemoryTitle {
+    font-size: 60px;
+    margin: 0;
+    transform: translateY(-30px);
+}
+#visualMemoryInstruction {
+    font-size: 25px;
+    margin: 0;
+    transform: translateY(-20px);
+}
+#visualMemoryStartButton {
+    padding: 12px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: rgb(245, 228, 208);
+}
+#visualMemoryGame {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+#visualMemoryLevel {
+    font-size: 35px;
+    margin: 0 0 30px 0;
+}
+#memoryGrid {
+    display: grid;
+    grid-template-columns:
+        repeat(3, 110px);
+    grid-template-rows:
+        repeat(3, 110px);
+    gap: 15px;
+}
+.memoryBox {
+    width: 110px;
+    height: 110px;
+    background-color: #eeeeee;
+    border-radius: 10px;
+    cursor: pointer;
+    transition:
+        background-color 0.1s;
+}
+.memoryBox.memory-highlight {
+    background-color:
+        rgb(245, 228, 208);
+}
+#visualMemoryResult {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+#visualMemoryResult h2 {
+    font-size: 50px;
+    margin: 0;
+}
+#visualMemoryScore {
+    font-size: 25px;
+    margin: 0;
+}
+#visualMemoryTryAgain {
+    padding: 12px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color:
+        rgb(245, 228, 208);
+}
