@@ -12,7 +12,6 @@ gameArea.addEventListener("click", function() {
     // START THE GAME
     if (!gameStarted) {
         gameStarted = true;
-        increaseGamesPlayed();
         waiting = true;
         gameArea.style.backgroundColor = "red";
         reactionLogo.style.display = "none";
@@ -68,7 +67,6 @@ if (numberGameArea) {
     let correctNumber = "";
     // START BUTTON
     startButton.addEventListener("click", function() {
-        increaseGamesPlayed();
         startButton.style.display = "none";
         numberMemoryLogo.style.display = "none";
         numberGameTitle.style.display = "none";
@@ -234,7 +232,6 @@ if (typingGameArea) {
         timerStarted = false;
         correctCharacters = 0;
         typingStarted = true;
-        increaseGamesPlayed();
         typingFinished = false;
     }
     // FINISH TEST
@@ -387,7 +384,6 @@ if (visualMemoryGameArea) {
             visualMemoryGame.style.display ="flex";
             currentLevel = 1;
             gameOver = false;
-            increaseGamesPlayed();
             startLevel();
         }
     );
