@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Blink</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Blink</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="login.html" class="active">Login</a>
+        <a href="signup.html">Sign Up</a>
+    </nav>
+    <div id="loginBox">
+
+        <h1>Welcome Back</h1>
+
+        <form id="loginForm">
+
+            <label for="loginEmail">Email</label>
+            <input
+                type="email"
+                id="loginEmail"
+                placeholder="Enter your email"
+            >
+
+            <label for="loginPassword">Password</label>
+            <input
+                type="password"
+                id="loginPassword"
+                placeholder="Enter your password"
+            >
+
+            <button type="submit">Login</button>
+
+        </form>
+
+        <p id="loginMessage"></p>
+
+        <p id="signupLink">
+            Don't have an account?
+            <a href="signup.html">Sign Up</a>
+        </p>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -353,3 +353,206 @@ body{
     background-color:
         rgb(245, 228, 208);
 }
+/* SIGN UP PAGE */
+
+#signupBox {
+    width: 90%;
+    height: 72vh;
+    margin: 6vh auto;
+
+    position: relative;
+    top: 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+
+    box-sizing: border-box;
+}
+/* HEADING */
+
+#signupBox h1 {
+    font-size: 25px;
+    margin: 0 0 5px 0;
+}
+
+/* SUBTITLE */
+
+#signupSubtitle {
+    font-size: 18px;
+    margin: 0 0 25px 0;
+}
+
+/* FORM */
+
+#signupForm {
+    width: 350px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* LABELS */
+
+#signupForm label {
+    text-align: left;
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+/* INPUTS */
+
+#signupForm input {
+    width: 100%;
+    height: 40px;
+
+    box-sizing: border-box;
+
+    padding: 8px 12px;
+    margin-bottom: 14px;
+
+    border: 1px solid #ccc;
+    border-radius: 8px;
+
+    font-size: 15px;
+}
+
+/* INPUT WHEN CLICKED */
+
+#signupForm input:focus {
+    outline: none;
+    border: 2px solid rgb(235, 200, 160);
+}
+
+/* SIGN UP BUTTON */
+
+#signupForm button {
+    width: 100%;
+    height: 42px;
+
+    margin-top: 4px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: rgb(235, 200, 160);
+
+    font-size: 17px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+#signupForm button:hover {
+    transform: translateY(-2px);
+}
+
+/* MESSAGE */
+
+#signupMessage {
+    margin: 10px 0 0 0;
+    font-size: 15px;
+}
+
+/* LOGIN LINK */
+
+#loginLink {
+    margin: 8px 0 0 0;
+    font-size: 15px;
+}
+/* LOGIN PAGE */
+
+#loginBox {
+    width: 90%;
+    height: 55vh;
+    margin: 17vh auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+
+    box-sizing: border-box;
+}
+
+#loginBox h1 {
+    font-size: 45px;
+    margin: 0 0 25px 0;
+}
+
+#loginForm {
+    width: 350px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#loginForm label {
+    text-align: left;
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+#loginForm input {
+    width: 100%;
+    height: 40px;
+
+    box-sizing: border-box;
+
+    padding: 8px 12px;
+    margin-bottom: 15px;
+
+    border: 1px solid #ccc;
+    border-radius: 8px;
+
+    font-size: 15px;
+}
+
+#loginForm input:focus {
+    outline: none;
+    border: 2px solid rgb(235, 200, 160);
+}
+
+#loginForm button {
+    width: 100%;
+    height: 42px;
+
+    margin-top: 5px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: rgb(235, 200, 160);
+
+    font-size: 17px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+#loginForm button:hover {
+    transform: translateY(-2px);
+}
+
+#loginMessage {
+    margin: 10px 0 0 0;
+    font-size: 15px;
+}
+
+#signupLink {
+    margin: 8px 0 0 0;
+    font-size: 15px;
+}

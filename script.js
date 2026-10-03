@@ -12,6 +12,7 @@ gameArea.addEventListener("click", function() {
     // START THE GAME
     if (!gameStarted) {
         gameStarted = true;
+        increaseGamesPlayed();
         waiting = true;
         gameArea.style.backgroundColor = "red";
         reactionLogo.style.display = "none";
@@ -67,6 +68,7 @@ if (numberGameArea) {
     let correctNumber = "";
     // START BUTTON
     startButton.addEventListener("click", function() {
+        increaseGamesPlayed();
         startButton.style.display = "none";
         numberMemoryLogo.style.display = "none";
         numberGameTitle.style.display = "none";
@@ -232,6 +234,7 @@ if (typingGameArea) {
         timerStarted = false;
         correctCharacters = 0;
         typingStarted = true;
+        increaseGamesPlayed();
         typingFinished = false;
     }
     // FINISH TEST
@@ -384,6 +387,7 @@ if (visualMemoryGameArea) {
             visualMemoryGame.style.display ="flex";
             currentLevel = 1;
             gameOver = false;
+            increaseGamesPlayed();
             startLevel();
         }
     );
@@ -496,4 +500,94 @@ if (visualMemoryGameArea) {
             startLevel();
         }
     );
+}
+// SIGN UP
+
+const signupForm = document.getElementById("signupForm");
+
+if (signupForm) {
+
+    signupForm.addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        const name = document.getElementById("signupName").value;
+        const email = document.getElementById("signupEmail").value;
+        const password = document.getElementById("signupPassword").value;
+        const confirmPassword = document.getElementById("signupConfirmPassword").value;
+        if (name === "" || email === "" || password === "" || confirmPassword === "") {
+    document.getElementById("signupMessage").innerText =
+        "Please fill in all fields.";
+    return;
+}
+if (password !== confirmPassword) {
+    document.getElementById("signupMessage").innerText =
+        "Passwords do not match.";
+    return;
+}
+if (password.length < 6) {
+    document.getElementById("signupMessage").innerText =
+        "Password must be at least 6 characters.";
+    return;
+}
+if (!email.includes("@")) {
+    document.getElementById("signupMessage").innerText =
+        "Please enter a valid email.";
+    return;
+}
+const user = {
+    name: name,
+    email: email,
+    password: password
+};
+localStorage.setItem("user", JSON.stringify(user));
+document.getElementById("signupMessage").innerText =
+    "Account created successfully!";
+    setTimeout(function() {
+    window.location.href = "login.html";
+}, 1000);
+
+    });
+
+}
+// LOGIN
+
+const loginForm = document.getElementById("loginForm");
+
+if (loginForm) {
+
+    loginForm.addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        const email = document.getElementById("loginEmail").value;
+        const password = document.getElementById("loginPassword").value;
+
+        const savedUser = JSON.parse(localStorage.getItem("user"));
+
+        if (!savedUser) {
+            document.getElementById("loginMessage").innerText =
+                "No account found. Please sign up first.";
+            return;
+        }
+
+        if (email === savedUser.email && password === savedUser.password) {
+            localStorage.setItem("isLoggedIn", "true");
+
+            document.getElementById("loginMessage").innerText =
+                "Login successful!";
+
+            setTimeout(function() {
+                window.location.href = "dashboard.html";
+            }, 1000);
+
+        } else {
+
+            document.getElementById("loginMessage").innerText =
+                "Invalid email or password.";
+
+        }
+
+    });
+
 }

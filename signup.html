@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Blink</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Blink</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="login.html">Login</a>
+        <a href="signup.html" class="active">Sign Up</a>
+    </nav>
+    <div id="signupBox">
+        <h1>Create Account</h1>
+        <form id="signupForm">
+            <label for="signupName">Name</label>
+            <input
+                type="text" id="signupName" placeholder="Enter your name">
+            <label for="signupEmail">Email</label>
+            <input type="email" id="signupEmail" placeholder="Enter your email">
+            <label for="signupPassword">Password</label>
+            <input type="password" id="signupPassword" placeholder="Enter your password">
+            <label for="signupConfirmPassword">Confirm Password</label>
+            <input type="password" id="signupConfirmPassword" placeholder="Confirm your password">
+            <button type="submit">Sign Up</button>
+        </form>
+        <p id="signupMessage"></p>
+        <p id="loginLink">
+            Already have an account?
+            <a href="login.html">Login</a>
+        </p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
